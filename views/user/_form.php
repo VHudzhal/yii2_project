@@ -50,8 +50,8 @@ AppAsset::register($this);
 </div>
 
 <?php $form = ActiveForm::begin(['id' => 'create_form', 'method' => 'POST',
-    'action' => 'index.php', 'options' => ['style' => 'width: 100%;']]); ?>
-<form name="create_form" method="post" id="create">
+    'action' => '', 'options' => ['style' => 'width: 100%;']]); ?>
+    <form name="create_form" method="post" id="create" action="">
     <div class="main" style="">
         <table style="border: double; width: 15%;">
             <tr>
@@ -65,7 +65,7 @@ AppAsset::register($this);
 
                 <table width="100%">
                     <tr id="initials" class="list-group">
-                        <td><?= $form->field($model, 'id')->textInput() ?></td>
+
                         <td><?= $form->field($model, 'Name')->textInput(['rows' => 6]) ?></td>
                         <td><?= $form->field($model, 'Surname')->textInput(['rows' => 6]) ?></td>
                         <td><?= $form->field($model, 'Reg_Date')->textInput() ?></td>
@@ -169,8 +169,8 @@ AppAsset::register($this);
                     </tr>
                 </table>
             </div>
+<?= Html::submitInput($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
 </form>
-<?php ActiveForm::end(); ?>
 
 <?php $this->endBody() ?>
 </body>
@@ -178,15 +178,4 @@ AppAsset::register($this);
 
 
 <?php $this->endPage() ?>
-<div class="user-form-form" >
 
-    <?php $form = ActiveForm::begin(); ?>
-
-
-    <div class="form-group">
-<!--        --><?//= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
-    </div>
-
-    <?php ActiveForm::end(); ?>
-
-</div>

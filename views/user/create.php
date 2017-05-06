@@ -18,11 +18,6 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
     ]);?>
 
-            <?= Html::a('Create', 'index', ['class' => 'btn btn-success',
-                'data' => [
-                    'method' => 'post',
-                ],
-                ]) ?>
 
 
 </div>
